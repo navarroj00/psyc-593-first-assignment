@@ -1,0 +1,9 @@
+Part 1 Feedback:
+
+- The peer added titles to each of their code chunks, and they also merged all their code chunks together for each answer.
+- Sometimes there may be several conditions in the question. The peer suggested starting a new line with a new data set.
+- Some questions set an age limitation (e.g., age 15 to 50 in question 2), but the code that was originally provided did not contain that part.
+- Be consistent with the pipe. Sometimes I would apply nested indentation to the pipeline, but sometimes I would not. It might be better to be consistent with the coding style.
+- The only style issues are that the name "popP" does not follow the style and the lack of spaces after each comma on line 250. The argument could be renamed pop_prop, for example.
+- In addition, I might want to add extra spaces to align the assignment operators and the paths on lines 67-71.
+- Regarding the indentation, the only actual issue appears on lines 373-376 which have lines aligned with the left parenthesis instead of the first character after the parenthesis.

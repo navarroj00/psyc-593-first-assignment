@@ -1,0 +1,6 @@
+TODO:
+
+- Rename "popP" to "pop_prop".
+- Add spaces after each comma on line 250.
+- Add extra spaces to align the assignment operators and the paths on lines 67-71.
+- Correct the line alignment on lines 373-376 such that the lines are aligned with the first character after the left parenthesis.
