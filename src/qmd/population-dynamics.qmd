@@ -64,11 +64,11 @@ library(tidyverse)
 root_path <- rprojroot::find_root(has_dir("src")) # This is the root/working directory
 
 # These are the subdirectories
-code_path <- file.path(root_path, "src") # Using the base R function file.path
-docs_path <- file.path(root_path, "doc")
+code_path     <- file.path(root_path, "src") # Using the base R function file.path
+docs_path     <- file.path(root_path, "doc")
 raw_data_path <- file.path(root_path, "data", "raw_data")
-figs_path <- file.path(root_path, "results", "figures")
-tables_path <- file.path(root_path, "results", "tables")
+figs_path     <- file.path(root_path, "results", "figures")
+tables_path   <- file.path(root_path, "results", "tables")
 ```
 
 ```{r}
@@ -247,7 +247,7 @@ compute_tfr <- function(population_data) {
               totals_world)
 
 # Compare how much these totals have changed
-(changes_totals <- totals_world[2,-1] / totals_world[1,-1])
+(changes_totals <- totals_world[2, -1] / totals_world[1, -1])
 ```
 
 From 1950 to 2000, both the number of women in the world and the total number of births increased. 
@@ -356,7 +356,7 @@ One way to understand the difference in the CDR between Kenya
 compute_pop_prop <- function(population_data) {
   population_data %>% 
     group_by(period) %>%
-    mutate(popP = py / sum(py)) %>%
+    mutate(pop_prop = py / sum(py)) %>%
     ungroup()
 }
 ```
@@ -371,9 +371,9 @@ sweden_data <- compute_pop_prop(sweden_data)
 ```{r}
 # Compute Kenyas CDR Kenya had Sweden's population distribution
 mutate(kenya_data,
-      temp_cdr = asdr * sweden_data$popP) %>%
-      group_by(period) %>%
-      summarise(cdrresweden = sum(temp_cdr))
+       temp_cdr = asdr * sweden_data$pop_prop) %>%
+       group_by(period) %>%
+       summarise(cdrresweden = sum(temp_cdr))
 ```
 
 During the period of 1950 to 1955, Kenya's counterfactual CDR is about the same as its original CDR. However, during the period of 2005 to 2010, Kenya's counterfactual CDR is greater than its original CDR; this suggests that, had Kenya had Sweden's population distribution at the time of measurement, Kenya's CDR would be considered more significant when compared with using its own population distribution.

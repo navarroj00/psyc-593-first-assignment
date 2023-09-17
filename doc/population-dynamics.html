@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jordan M Navarro">
-<meta name="dcterms.date" content="2023-09-07">
+<meta name="dcterms.date" content="2023-09-16">
 
 <title>Understanding World Population Dynamics</title>
 <style>
@@ -3154,7 +3154,7 @@ return!"\t\n\x0B\f\r                　\u2028\u2029
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 7, 2023</p>
+      <p class="date">September 16, 2023</p>
     </div>
   </div>
   
@@ -3219,11 +3219,11 @@ return!"\t\n\x0B\f\r                　\u2028\u2029
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>root_path <span class="ot">&lt;-</span> rprojroot<span class="sc">::</span><span class="fu">find_root</span>(<span class="fu">has_dir</span>(<span class="st">&quot;src&quot;</span>)) <span class="co"># This is the root/working directory</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># These are the subdirectories</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>code_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;src&quot;</span>) <span class="co"># Using the base R function file.path</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>docs_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;doc&quot;</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>code_path     <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;src&quot;</span>) <span class="co"># Using the base R function file.path</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>docs_path     <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;doc&quot;</span>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>raw_data_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;data&quot;</span>, <span class="st">&quot;raw_data&quot;</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>figs_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;results&quot;</span>, <span class="st">&quot;figures&quot;</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>tables_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;results&quot;</span>, <span class="st">&quot;tables&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>figs_path     <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;results&quot;</span>, <span class="st">&quot;figures&quot;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>tables_path   <span class="ot">&lt;-</span> <span class="fu">file.path</span>(root_path, <span class="st">&quot;results&quot;</span>, <span class="st">&quot;tables&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data</span></span>
@@ -3375,7 +3375,7 @@ return!"\t\n\x0B\f\r                　\u2028\u2029
 2 2005-2010   16554781.      674581.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare how much these totals have changed</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>(changes_totals <span class="ot">&lt;-</span> totals_world[<span class="dv">2</span>,<span class="sc">-</span><span class="dv">1</span>] <span class="sc">/</span> totals_world[<span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>(changes_totals <span class="ot">&lt;-</span> totals_world[<span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>] <span class="sc">/</span> totals_world[<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  total_women total_births
 1    2.525256     1.379818</code></pre>
@@ -3458,7 +3458,7 @@ return!"\t\n\x0B\f\r                　\u2028\u2029
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>compute_pop_prop <span class="ot">&lt;-</span> <span class="cf">function</span>(population_data) {</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  population_data <span class="sc">%&gt;%</span> </span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(period) <span class="sc">%&gt;%</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">popP =</span> py <span class="sc">/</span> <span class="fu">sum</span>(py)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">pop_prop =</span> py <span class="sc">/</span> <span class="fu">sum</span>(py)) <span class="sc">%&gt;%</span></span>
 <span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>()</span>
 <span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -3471,9 +3471,9 @@ return!"\t\n\x0B\f\r                　\u2028\u2029
 <div class="cell">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute Kenyas CDR Kenya had Sweden&#39;s population distribution</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(kenya_data,</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">temp_cdr =</span> asdr <span class="sc">*</span> sweden_data<span class="sc">$</span>popP) <span class="sc">%&gt;%</span></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">group_by</span>(period) <span class="sc">%&gt;%</span></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">summarise</span>(<span class="at">cdrresweden =</span> <span class="fu">sum</span>(temp_cdr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">temp_cdr =</span> asdr <span class="sc">*</span> sweden_data<span class="sc">$</span>pop_prop) <span class="sc">%&gt;%</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">group_by</span>(period) <span class="sc">%&gt;%</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">summarise</span>(<span class="at">cdrresweden =</span> <span class="fu">sum</span>(temp_cdr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   period    cdrresweden
